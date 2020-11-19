@@ -57,7 +57,7 @@ data.push(
 )
 };
 
-console.log(data)
+console.log(data);
 
 
 //MENSAGEM
