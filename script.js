@@ -1,44 +1,5 @@
 //CADASTRO
-const campo = document.getElementsByClassName("campo");
-[
-    {
-        elemento: "",
-        peso: "",
-        volume: "",
-        latitude: "",
-        longitude: "",
-        id: ""
-    },
 
-]
-
-const info = 
-[
-    {
-       
-    },
-];
-
-function getInfo() {
-    for (let i = 0; i < campo.length; i++) {
-        info.push(campo[i].value);
-    }
-    console.log(info);
-}
-
-
-function change() {
-    let txt;
-    let r = confirm("Cadastrar dados no sistema?");
-    if (r == true) {
-      txt = "Dados cadastrados com sucesso!";
-    } else {
-      txt = "Dados não cadastrados.";
-    }
-    document.getElementById("confirmar").innerHTML = txt;
-  }
-
-//CONSULTA - LISTA DINÂMICA
 let data = [
     {
         id: "121w1x",
@@ -83,6 +44,38 @@ let data = [
 ];
 
 
+function getInfo(){
+data.push(
+    {
+    id: id.value,
+    elemento: elemento.value,
+    peso: peso.value,
+    volume: volume.value,
+    long: longitude.value,
+    lag: latitude.value
+    }
+)
+};
+
+console.log(data)
+
+
+//MENSAGEM
+
+function change() {
+    let txt;
+    let r = confirm("Cadastrar dados no sistema?");
+    if (r == true) {
+      txt = "Dados cadastrados com sucesso!";
+    } else {
+      txt = "Dados não cadastrados.";
+    }
+    document.getElementById("confirmar").innerHTML = txt;
+}
+
+
+//CONSULTA - LISTA DINÂMICA
+
 const lista = document.getElementById("lista");
 const inf = document.getElementById("inf");
 
@@ -102,6 +95,6 @@ function search() {
                 <p> Latitude: ${data[i].lag} </p>
             </li>
             `;
-        }
-    }
-}
+        };
+    }''
+};
